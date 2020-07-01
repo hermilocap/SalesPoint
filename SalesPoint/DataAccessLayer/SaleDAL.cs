@@ -1,19 +1,27 @@
 ﻿using DataAccessLayer.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
     public class SaleDAL
     {
+        static public IConfigurationRoot Configuration { get; set; }
         public async Task<ActionResult<List<Sale>>> Sales()
         {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json");
+            Configuration = builder.Build();
+            var stringConection = Configuration["ConnectionStrings:MyConnection"];
             var sales = new List<Sale>();
-            using (var con = new SqlConnection("Data Source=HERMILO;Initial Catalog=PointSales;User ID=sa;Password=123456789;"))
+            using (var con = new SqlConnection(stringConection))
             {
                 con.Open();
                 var query = new SqlCommand("spGetSales", con);
@@ -38,8 +46,13 @@ namespace DataAccessLayer
         }
         public async Task<ActionResult<SaleDetailsDTO>> SalesDetails(int id)
         {
+            var builder = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json");
+            Configuration = builder.Build();
+            var stringConection = Configuration["ConnectionStrings:MyConnection"];
             var sale = new SaleDetailsDTO();
-            using (var con = new SqlConnection("Data Source=HERMILO;Initial Catalog=PointSales;User ID=sa;Password=123456789;"))
+            using (var con = new SqlConnection(stringConection))
             {
                 con.Open();
                 var query = new SqlCommand("spGetSalesDetails", con);
