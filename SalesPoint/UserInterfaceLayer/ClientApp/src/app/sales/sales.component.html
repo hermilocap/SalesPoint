@@ -1,0 +1,26 @@
+<h2>Ventas del día</h2>
+<div class="row">
+  <button (click)="OnPrintSale()" class="btn btn-success">Imprimir</button>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Clave</th>
+      <th>Cantidad</th>
+      <th>Importe</th>
+      <th>Fecha</th>
+      <th class="text-center"><span> Opciones</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of sales">
+      <td>{{item.saleId}}</td>
+      <td>{{item.quantity}}</td>
+      <td>{{item.mount|currency}}</td>
+      <td>{{item.dateSale|date:'dd/MM/yyyy'}}</td>
+      <td class="text-center">
+        <button (click)="OnSaleDetail(item.saleId)" class="btn btn-primary">Detalles</button>|<input type="checkbox" (change)="RowSelected(item.saleId)" />
+      </td>
+    </tr>
+  </tbody>
+</table>
