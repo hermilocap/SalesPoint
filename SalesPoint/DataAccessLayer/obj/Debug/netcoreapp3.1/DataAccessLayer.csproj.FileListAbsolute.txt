@@ -1,0 +1,8 @@
+C:\Users\hermilocap\Desktop\SalesPoint\SalesPoint\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.deps.json
+C:\Users\hermilocap\Desktop\SalesPoint\SalesPoint\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.dll
+C:\Users\hermilocap\Desktop\SalesPoint\SalesPoint\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\hermilocap\Desktop\SalesPoint\SalesPoint\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\hermilocap\Desktop\SalesPoint\SalesPoint\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.AssemblyInfo.cs
+C:\Users\hermilocap\Desktop\SalesPoint\SalesPoint\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.pdb
+C:\Users\hermilocap\Desktop\SalesPoint\SalesPoint\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.dll
+C:\Users\hermilocap\Desktop\SalesPoint\SalesPoint\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.pdb
